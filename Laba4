@@ -23,7 +23,21 @@ write('Vvedite element: ');
 readln(arr[i]); 
 end; 
 end; 
- 
+ procedure Sort(var arr:victor); 
+var max,most,j:integer; 
+buff:real; 
+begin 
+for max:=0 to n-2 do  
+begin 
+most:=max;  
+for j:=max+1 to n-1 do 
+if arr[j]>arr[most] then  
+most:=j; 
+buff:=arr[max]; 
+arr[max]:=arr[most]; 
+arr[most]:=buff; 
+end; 
+
 procedure Vivod(arr:victor); 
 var i:integer; 
 begin 
